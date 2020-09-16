@@ -18,19 +18,19 @@ permalink: /
 
     <div class="col-md-10">
         {% for service in site.services %}
-        {% assign mod = forloop.index0 | modulo: 4 %}
+        {% assign mod = forloop.index0 | modulo: 3 %}
         {% if forloop.first == false and mod == 0 %}
     </div>
     {% endif %}
     {% if mod == 0 %}
     <div class="row">
         {%endif%}
-        <div class="col-md-3 col-sm-3 py-4 px-lg-3 d-flex align-items-center flex-column">
+        <div class="col-4 py-4 px-lg-3 d-flex align-items-center flex-column">
             <div class="p-2">
                 <h3>{{service.name}}</h3>
             </div>
             <div class="p-2">
-                <img height="96px" src="{{service.icon}}" />
+                <img src="{{service.icon}}" />
             </div>
             <div class="p-2"><small>{{service.description}}</small></div>
         </div>
@@ -94,20 +94,20 @@ permalink: /
     </div>
     <div class="col-md-10">
         {% for prod in site.catalog %}
-        {% assign mod = forloop.index0 | modulo: 3 %}
+        {% assign mod = forloop.index0 | modulo: 4 %}
         {% if forloop.first == false and mod == 0 %}
     </div>
     {% endif %}
     {% if mod == 0 %}
     <div class="row">
         {%endif%}
-        <div class="col-md-4 py-4 px-lg-3 d-flex align-items-center flex-column">
+        <div class="col-md-3 col-6 py-4 px-lg-3 d-flex align-items-center flex-column">
             <div class="flex-column"><img height="96px" src="{{prod.icon}}" /></div>
             <div class="flex-column"><small>{{prod.description}}</small></div>
         </div>
 
         {% endfor %}
-    </div>
+    <!--</div>-->
 
 </section>
 <section id="team">
@@ -132,7 +132,7 @@ permalink: /
     {% if mod == 0 %}
     <div class="row">
         {%endif%}
-        <div class="col-md-3 py-4 px-md-5 d-flex align-items-center flex-column">
+        <div class="col-6 col-md-3 py-4 px-md-5 d-flex align-items-center flex-column">
             <div class="flex-column"><img height="128px" class="rounded-circle" src="{{p.photo}}" /></div>
             <div class="flex-column" style="padding-top: 24px;">{{p.name}}</div>
             <div class="flex-column">
@@ -189,12 +189,12 @@ permalink: /
         {% for partner in site.partners %}
         {% assign mod = forloop.index0 | modulo: 4 %}
         {% if forloop.first == false and mod == 0 %}
-    </div>
+    </div>  
     {% endif %}
     {% if mod == 0 %}
     <div class="row">
         {%endif%}
-        <div class="col-md-3 py-4 px-lg-3 d-flex align-items-center flex-column">
+        <div class="col-md-3 col-6 py-4 px-lg-3 d-flex align-items-center flex-column">
             <div class="flex-column"><img src="{{partner.photo}}" /></div>
         </div>
 
