@@ -39,7 +39,7 @@ permalink: /
                             <div class="p-2">
                                 <img src="{{service.icon}}" />
                             </div>
-                            <div class="p-2"><small>{{service.description}}</small></div>
+                            <div class="p-2">{{service.description}}</div>
                         </div>
 
                         {% endfor %}
@@ -51,8 +51,7 @@ permalink: /
     <svg viewBox="0 0 1440 192" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path fill="#EDEDED" fill-opacity="1" d="M0,96L720,192L1440,96L1440,0L720,0L0,0Z"></path>
     </svg>
-    <div id="tech"
-         class="box-lg">
+    <div id="tech" class="box-lg">
         <div class="box col-md-6">
             <h2 class="box-header">Technologies we work with</h2>
             <p>
@@ -96,8 +95,7 @@ permalink: /
             d="M0,192L80,176C160,160,320,128,480,138.7C640,149,800,203,960,202.7C1120,203,1280,149,1360,122.7L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
             transform="matrix(1, 0, 0, 1, -138.503845, 476.847809)"></path>
     </svg>
-    <div id="products"
-         class="box-lg">
+    <div id="products" class="box-lg">
         <div class="box col-md-6">
             <h2 class="box-header">
                 Products
@@ -117,8 +115,10 @@ permalink: /
         <div class="row row-cols-md-4 row-cols-2 justify-content-center">
             {% for prod in site.catalog %}
             <div class="py-4 d-flex align-items-center flex-column">
-                <div class="flex-column"><img src="{{prod.icon}}" /></div>
-                <div class="flex-column"><small>{{prod.description}}</small></div>
+                <a class="product-link" href="{{prod.url}}">
+                    <div class="flex-column pt-2"><img src="{{prod.icon}}" /></div>
+                    <div class="product-desc pt-5 flex-column">{{prod.description}}</div>
+                </a>
             </div>
             {% endfor %}
         </div>
@@ -193,8 +193,7 @@ permalink: /
         <path fill="#333333" fill-opacity="1" d="M0,64L1440,160L1440,0L0,0Z"></path>
     </svg>
 
-    <div id="partners"
-         class="box-lg">
+    <div id="partners" class="box-lg">
         <div class="box col-md-6">
             <h2 class="box-header">Thanks</h2>
             <p>

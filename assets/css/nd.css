@@ -184,3 +184,19 @@ img {
   background-color: #e04855;
   border-color: #e04855;
 }
+
+.product-desc {
+  font-family: "Nunito Sans";
+  margin-top: 0px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: rgb(85, 85, 85);
+  font-weight: bolder;
+}
+
+.product-link:hover {
+  text-decoration: underline;
+  box-shadow: rgb(111,255,176) 0px 0px 2px 2px;
+}
