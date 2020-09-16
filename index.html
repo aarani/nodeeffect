@@ -115,7 +115,7 @@ permalink: /
         <div class="row row-cols-md-4 row-cols-2 justify-content-center">
             {% for prod in site.catalog %}
             <div class="py-4 d-flex align-items-center flex-column">
-                <a class="product-link" href="{{prod.url}}">
+                <a class="product-link" href="{{prod.source_url}}">
                     <div class="flex-column pt-2"><img src="{{prod.icon}}" /></div>
                     <div class="product-desc pt-5 flex-column">{{prod.description}}</div>
                 </a>
