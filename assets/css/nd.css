@@ -1,6 +1,8 @@
 html {
   scroll-behavior: smooth;
+  font-family: Khula;
 }
+
 body {
   background-color: rgb(237, 237, 237);
   font-family: Nunito Sans !important;
