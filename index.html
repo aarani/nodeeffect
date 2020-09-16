@@ -17,25 +17,20 @@ permalink: /
     </div>
 
     <div class="col-md-10">
-        {% for service in site.services %}
-        {% assign mod = forloop.index0 | modulo: 3 %}
-        {% if forloop.first == false and mod == 0 %}
-    </div>
-    {% endif %}
-    {% if mod == 0 %}
-    <div class="row">
-        {%endif%}
-        <div class="col-4 py-4 px-lg-3 d-flex align-items-center flex-column">
-            <div class="p-2">
-                <h3>{{service.name}}</h3>
+        <div class="row row-cols-4">
+            {% for service in site.services %}
+            <div class="col px-lg-5 d-flex align-items-center flex-column">
+                <div class="p-2">
+                    <h3>{{service.name}}</h3>
+                </div>
+                <div class="p-2">
+                    <img src="{{service.icon}}" />
+                </div>
+                <div class="p-2"><small>{{service.description}}</small></div>
             </div>
-            <div class="p-2">
-                <img src="{{service.icon}}" />
-            </div>
-            <div class="p-2"><small>{{service.description}}</small></div>
-        </div>
 
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 </section>
 
@@ -107,7 +102,7 @@ permalink: /
         </div>
 
         {% endfor %}
-    <!--</div>-->
+        <!--</div>-->
 
 </section>
 <section id="team">
@@ -189,7 +184,7 @@ permalink: /
         {% for partner in site.partners %}
         {% assign mod = forloop.index0 | modulo: 4 %}
         {% if forloop.first == false and mod == 0 %}
-    </div>  
+    </div>
     {% endif %}
     {% if mod == 0 %}
     <div class="row">
