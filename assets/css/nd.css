@@ -13,6 +13,7 @@ nav {
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
+  border-bottom: 2px solid rgb(205, 35, 50);
 }
 
 nav .btn {
