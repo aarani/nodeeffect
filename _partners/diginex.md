@@ -1,3 +1,3 @@
 ---
-photo: "assets/partners/diginex.svg"
+photo: "assets/partners/diginex.png"
 ---
