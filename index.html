@@ -17,21 +17,34 @@ permalink: /
     </div>
 
     <div class="col-md-10">
-        <div class="row row-cols-md-4 row-cols-1">
-            {% for service in site.services %}
-            <div class="col px-lg-5 d-flex align-items-center flex-column">
-                <div class="p-2">
-                    <h3>{{service.name}}</h3>
-                </div>
-                <div class="p-2">
-                    <img src="{{service.icon}}" />
-                </div>
-                <div class="p-2"><small>{{service.description}}</small></div>
-            </div>
+        {% assign remainder_by_4 = site.services.size | modulo: 4 %}
+        {% assign remainder_by_3 = site.services.size | modulo: 3 %}
+        {% assign remainder_by_2 = site.services.size | modulo: 2 %}
 
-            {% endfor %}
+        {%if remainder_by_4 == 0 %}
+            <div class="row row-cols-md-4 row-cols-1">
+        {%elsif remainder_by_3 == 0 %}
+            <div class="row row-cols-md-3 row-cols-1">
+        {%elsif remainder_by_2 == 0 %}
+            <div class="row row-cols-md-2 row-cols-1">
+        {%else%}
+            <div class="row row-cols-md-4 row-cols-1">
+        {%endif%}
+
+                {% for service in site.services %}
+                <div class="col px-lg-5 d-flex align-items-center flex-column">
+                    <div class="p-2">
+                        <h3>{{service.name}}</h3>
+                    </div>
+                    <div class="p-2">
+                        <img src="{{service.icon}}" />
+                    </div>
+                    <div class="p-2"><small>{{service.description}}</small></div>
+                </div>
+
+                {% endfor %}
+            </div>
         </div>
-    </div>
 </section>
 
 <section id="tech">
@@ -51,9 +64,22 @@ permalink: /
         </div>
     </div>
     <div class="col-md-10">
-        <div class="row row-cols-1 row-cols-md-3 ">
+        {% assign tech_by_4 = site.tech.size | modulo: 4 %}
+        {% assign tech_by_3 = site.tech.size | modulo: 3 %}
+        {% assign tech_by_2 = site.tech.size | modulo: 2 %}
+
+        {%if tech_by_4 == 0 %}
+            <div class="row row-cols-md-4 row-cols-1">
+        {%elsif tech_by_3 == 0 %}
+            <div class="row row-cols-md-3 row-cols-1">
+        {%elsif tech_by_2 == 0 %}
+            <div class="row row-cols-md-2 row-cols-1">
+        {%else%}
+            <div class="row row-cols-md-3 row-cols-1">
+        {%endif%}
+
             {% for tech in site.tech %}
-            <div class="col-md-4 py-4 px-lg-3 d-flex align-items-center flex-column">
+            <div class="py-4 px-lg-3 d-flex align-items-center flex-column">
                 <div class="flex-column"><img src="{{tech.icon}}" /></div>
                 <div class="flex-column"><small>{{tech.description}}</small></div>
             </div>
@@ -83,9 +109,21 @@ permalink: /
         </div>
     </div>
     <div class="col-md-10">
-        <div class="row row-cols-2 row-cols-md-4">
+        {% assign products_by_4 = site.catalog.size | modulo: 4 %}
+        {% assign products_by_3 = site.catalog.size | modulo: 3 %}
+        {% assign products_by_2 = site.catalog.size | modulo: 2 %}
+
+        {%if products_by_4 == 0 %}
+            <div class="row row-cols-md-4 row-cols-2">
+        {%elsif products_by_3  == 0 %}
+            <div class="row row-cols-md-3 row-cols-2">
+        {%elsif products_by_2 == 0 %}
+            <div class="row row-cols-md-2 row-cols-2">
+        {%else%}
+            <div class="row row-cols-md-4 row-cols-2">
+        {%endif%}
             {% for prod in site.catalog %}
-            <div class="col-md-3 col-6 py-4 px-lg-3 d-flex align-items-center flex-column">
+            <div class="py-4 px-lg-3 d-flex align-items-center flex-column">
                 <div class="flex-column"><img src="{{prod.icon}}" /></div>
                 <div class="flex-column"><small>{{prod.description}}</small></div>
             </div>
@@ -172,9 +210,22 @@ permalink: /
     </div>
 
     <div class="col-md-10">
-        <div class="row row-cols-1 row-cols-md-4">
-            {% for partner in site.partners %} <div
-                class="col-md-3 col-6 py-4 px-lg-3 d-flex align-items-center flex-column">
+        {% assign partners_by_4 = site.partners.size | modulo: 4 %}
+        {% assign partners_by_3 = site.partners.size | modulo: 3 %}
+        {% assign partners_by_2 = site.partners.size | modulo: 2 %}
+
+        {%if partners_by_4 == 0 %}
+            <div class="row row-cols-md-4 row-cols-1">
+        {%elsif partners_by_3 == 0 %}
+            <div class="row row-cols-md-3 row-cols-1">
+        {%elsif partners_by_2 == 0 %}
+            <div class="row row-cols-md-2 row-cols-1">
+        {%else%}
+            <div class="row row-cols-md-4 row-cols-1">
+        {%endif%}
+
+            {% for partner in site.partners %} 
+            <div class="py-4 px-lg-3 d-flex align-items-center flex-column">
                 <div class="flex-column"><img src="{{partner.photo}}" /></div>
             </div>
 
