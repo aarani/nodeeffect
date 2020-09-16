@@ -51,20 +51,15 @@ permalink: /
         </div>
     </div>
     <div class="col-md-10">
-        {% for tech in site.tech %}
-        {% assign mod = forloop.index0 | modulo: 3 %}
-        {% if forloop.first == false and mod == 0 %}
-    </div>
-    {% endif %}
-    {% if mod == 0 %}
-    <div class="row">
-        {%endif%}
-        <div class="col-md-4 py-4 px-lg-3 d-flex align-items-center flex-column">
-            <div class="flex-column"><img src="{{tech.icon}}" /></div>
-            <div class="flex-column"><small>{{tech.description}}</small></div>
-        </div>
+        <div class="row row-cols-1 row-cols-md-3 ">
+            {% for tech in site.tech %}
+            <div class="col-md-4 py-4 px-lg-3 d-flex align-items-center flex-column">
+                <div class="flex-column"><img src="{{tech.icon}}" /></div>
+                <div class="flex-column"><small>{{tech.description}}</small></div>
+            </div>
 
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 
 </section>
@@ -88,21 +83,15 @@ permalink: /
         </div>
     </div>
     <div class="col-md-10">
-        {% for prod in site.catalog %}
-        {% assign mod = forloop.index0 | modulo: 4 %}
-        {% if forloop.first == false and mod == 0 %}
-    </div>
-    {% endif %}
-    {% if mod == 0 %}
-    <div class="row">
-        {%endif%}
-        <div class="col-md-3 col-6 py-4 px-lg-3 d-flex align-items-center flex-column">
-            <div class="flex-column"><img src="{{prod.icon}}" /></div>
-            <div class="flex-column"><small>{{prod.description}}</small></div>
+        <div class="row row-cols-2 row-cols-md-4">
+            {% for prod in site.catalog %}
+            <div class="col-md-3 col-6 py-4 px-lg-3 d-flex align-items-center flex-column">
+                <div class="flex-column"><img src="{{prod.icon}}" /></div>
+                <div class="flex-column"><small>{{prod.description}}</small></div>
+            </div>
+            {% endfor %}
         </div>
-
-        {% endfor %}
-        <!--</div>-->
+    </div>
 
 </section>
 <section id="team">
@@ -183,19 +172,14 @@ permalink: /
     </div>
 
     <div class="col-md-10">
-        {% for partner in site.partners %}
-        {% assign mod = forloop.index0 | modulo: 4 %}
-        {% if forloop.first == false and mod == 0 %}
-    </div>
-    {% endif %}
-    {% if mod == 0 %}
-    <div class="row">
-        {%endif%}
-        <div class="col-md-3 col-6 py-4 px-lg-3 d-flex align-items-center flex-column">
-            <div class="flex-column"><img src="{{partner.photo}}" /></div>
-        </div>
+        <div class="row row-cols-1 row-cols-md-4">
+            {% for partner in site.partners %} <div
+                class="col-md-3 col-6 py-4 px-lg-3 d-flex align-items-center flex-column">
+                <div class="flex-column"><img src="{{partner.photo}}" /></div>
+            </div>
 
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 </section>
 
