@@ -152,3 +152,14 @@ img {
 #services img {
   height: 96px;
 }
+
+.btn-danger {
+  color: #fff;
+  background-color: rgb(205, 35, 50);
+  border-color: rgb(205, 35, 50);
+}
+
+.btn-danger:hover {
+  background-color: #e04855;
+  border-color: #e04855;
+}
