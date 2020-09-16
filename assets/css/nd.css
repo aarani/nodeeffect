@@ -28,6 +28,10 @@ row {
   vertical-align: middle;
 }
 
+services .p-2 {
+  text-align: center;
+}
+
 .header h1 {
   font-family: Khula;
   font-size: 34px;
