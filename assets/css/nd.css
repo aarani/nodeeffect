@@ -160,6 +160,10 @@ img {
   height: 96px;
 }
 
+#products img {
+  height: 128px;
+}
+
 .btn-danger {
   color: #fff;
   background-color: rgb(205, 35, 50);
