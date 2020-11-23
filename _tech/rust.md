@@ -1,4 +1,4 @@
 ---
-description: Rust-based safe & performant integrations
+description: Safe and performant Rust-based integrations
 icon: assets/tech/rust.svg
 ---
